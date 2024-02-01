@@ -104,6 +104,14 @@ const Upload =()=>{
                                 {!csvFile ? (<span> Drop Your Excel Sheet here  Or <span className="text-blue-500"><a href ="#"></a>browse</span></span>):(<span>{csvFile.name}</span>) }
                             </label>
                             </div>
+                            {
+                              csvFile &&
+                              (
+                                <div>
+                                  <button className="text-red-500 m-4">Remove</button>
+                                </div>
+                              )
+                            }
                         </div>
                         <button className="bg-logocolor text-white flex w-full justify-center rounded-md p-3 gap-2" onClick={handleSubmit}> 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
